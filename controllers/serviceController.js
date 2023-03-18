@@ -20,6 +20,6 @@ export const getServices = async (req, res) => {
         const services = await Service.find(query);
         res.status(200).send(services)
     } catch (error) {
-        res.send({ msg: "something wend wrong" })
+        res.send({ msg: "something wend wrong samjha me aa rha hai kuchh" })
     }
 }
