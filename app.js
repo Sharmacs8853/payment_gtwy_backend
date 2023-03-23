@@ -5,6 +5,7 @@ import cors from "cors";
 import serviceRouter from "./routes/serviceRoute.js";
 import userRoute from "./routes/userRoute.js"
 import adminRoute from "./routes/adminRout.js"
+import gstRoute from "./routes/gstRoute.js"
 
 config({ path: "./config/config.env" });
 
@@ -17,7 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api", paymentRoute);
 app.use("/services", serviceRouter);
 app.use("/user", userRoute);
-app.use("/admin", adminRoute)
+app.use("/admin", adminRoute);
+app.use("/gst", gstRoute); 
 
 
 app.get("/api/getkey", (req, res) =>
